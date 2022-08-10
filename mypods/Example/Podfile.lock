@@ -1,0 +1,16 @@
+PODS:
+  - mypods (0.1.0)
+
+DEPENDENCIES:
+  - mypods (from `../`)
+
+EXTERNAL SOURCES:
+  mypods:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  mypods: 4545e6576922c7eb087647abc52b3c58a1340405
+
+PODFILE CHECKSUM: 6013655bf7cb8d14461d43cb02dbf017cc6f91f8
+
+COCOAPODS: 1.11.3

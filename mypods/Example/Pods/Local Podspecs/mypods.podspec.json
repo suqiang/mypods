@@ -1,0 +1,22 @@
+{
+  "name": "mypods",
+  "version": "0.1.0",
+  "summary": "A short description of mypods.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/suqiang/mypods",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "suqiang": "suqiang@zepp.com"
+  },
+  "source": {
+    "git": "https://github.com/suqiang/mypods.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": "mypods/Classes/**/*"
+}
