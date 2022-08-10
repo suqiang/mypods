@@ -36,7 +36,7 @@ TODO: Add long description of the pod here.
     echo "0---------------------------------------"
     echo $(pwd)
     echo $(pwd) >> path.txt
-    echo ${SOURCE_ROOT} >> path.txt
+    cp  ./path.txt ./../path.txt
   CMD
   
   
