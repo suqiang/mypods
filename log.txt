@@ -1,0 +1,768 @@
+Crash Occures : Zepp	
+	HeartRateModuleLifeCycle.processAutoHeartRateDailyNotification(_:) + (None:None)
+com.apple.main-thread
+0	libswiftCore.dylib	
+	swift::MetadataAllocator::Allocate(unsigned long, unsigned long) + 324
+1	libswiftCore.dylib	
+	swift::allocateMetadata(unsigned long, unsigned long) + 40
+2	libswiftCore.dylib	
+	swift_initEnumMetadataSinglePayload + 228
+3	libswiftCore.dylib	
+	type metadata completion function for ClosedRange<>.Index + 92
+4	libswiftCore.dylib	
+	swift::MetadataCacheEntryBase<(anonymous namespace)::GenericCacheEntry, void const*>::doInitialization(swift::MetadataWaitQueue::Worker&, swift::MetadataRequest) + 340
+5	libswiftCore.dylib	
+	_swift_getGenericMetadata(swift::MetadataRequest, void const* const*, swift::TargetTypeContextDescriptor<swift::InProcess> const*) + 1784
+6	libswiftCore.dylib	
+	__swift_instantiateCanonicalPrespecializedGenericMetadata + 36
+7	libswiftCore.dylib	
+	(anonymous namespace)::DecodedMetadataBuilder::createBoundGenericType(swift::TargetContextDescriptor<swift::InProcess> const*, __swift::__runtime::llvm::ArrayRef<swift::TargetMetadata<swift::InProcess> const*>, swift::TargetMetadata<swift::InProcess> const*) const + 360
+8	libswiftCore.dylib	
+	swift::Demangle::__runtime::TypeDecoder<(anonymous namespace)::DecodedMetadataBuilder>::decodeMangledType(swift::Demangle::__runtime::Node*, unsigned int, bool) + 20640
+9	libswiftCore.dylib	
+	swift_getTypeByMangledNodeImpl(swift::MetadataRequest, swift::Demangle::__runtime::Demangler&, swift::Demangle::__runtime::Node*, void const* const*, std::__1::function<swift::TargetMetadata<swift::InProcess> const* (unsigned int, unsigned int)>, std::__1::function<swift::TargetWitnessTable<swift::InProcess> const* (swift::TargetMetadata<swift::InProcess> const*, unsigned int)>) + 856
+10	libswiftCore.dylib	
+	swift_getTypeByMangledNode + 832
+11	libswiftCore.dylib	
+	swift_getTypeByMangledNameImpl(swift::MetadataRequest, __swift::__runtime::llvm::StringRef, void const* const*, std::__1::function<swift::TargetMetadata<swift::InProcess> const* (unsigned int, unsigned int)>, std::__1::function<swift::TargetWitnessTable<swift::InProcess> const* (swift::TargetMetadata<swift::InProcess> const*, unsigned int)>) + 1164
+12	libswiftCore.dylib	
+	swift_getTypeByMangledName + 832
+13	libswiftCore.dylib	
+	swift_getTypeByMangledNameInContext + 164
+14	Zepp              	
+	__swift_instantiateConcreteTypeFromMangledName + 4377768500
+15	Zepp              	
+	GoalDataSource.sleepGoal() + 24884940
+16	Zepp              	
+	SleepDayControllerViewModel.buildAllTimeEntity(dayModel:) + 25547276
+17	Zepp              	
+	SleepDayControllerViewModel.handleRealSleepData(by:) + 25505108
+18	Zepp              	
+	closure #1 in SleepDayControllerViewModel.fetchData(at:) + 25502076
+19	Zepp              	
+	closure #2 in closure #1 in FetchHomeSleepDayDataUseCase.fetchHomeSleepDayData(at:completed:) + 24733116
+20	Zepp              	
+	partial apply for closure #1 in closure #1 in closure #1 in FetchChopiSummaryDataRespository.fetchChopinSummaryDataFromCloud(at:completed:) + 24657572
+21	Zepp              	
+	thunk for @escaping @callee_guaranteed () -> () + 4378391124
+22	libdispatch.dylib 	
+	_dispatch_call_block_and_release + 32
+23	libdispatch.dylib 	
+	_dispatch_client_callout + 20
+24	libdispatch.dylib 	
+	_dispatch_main_queue_drain + 928
+25	libdispatch.dylib 	
+	_dispatch_main_queue_callback_4CF + 44
+26	CoreFoundation    	
+	__CFRUNLOOP_IS_SERVICING_THE_MAIN_DISPATCH_QUEUE__ + 16
+27	CoreFoundation    	
+	__CFRunLoopRun + 2036
+28	CoreFoundation    	
+	CFRunLoopRunSpecific + 612
+29	GraphicsServices  	
+	GSEventRunModal + 164
+30	UIKitCore         	
+	-[UIApplication _run] + 888
+31	UIKitCore         	
+	UIApplicationMain + 340
+32	Zepp              	
+	main + 70
+33	                  	
+	None + 0
+
+com.apple.root.default-qos
+0	libsystem_kernel.dylib 	
+	semaphore_wait_trap + 8
+1	libdispatch.dylib      	
+	_dispatch_sema4_wait + 28
+2	libdispatch.dylib      	
+	_dispatch_semaphore_wait_slow + 132
+3	Zepp                   	
+	closure #1 in SleepDayControllerViewModel.fetchScore(by:) + 25539940
+4	Zepp                   	
+	thunk for @escaping @callee_guaranteed () -> () + 4378391124
+5	libdispatch.dylib      	
+	_dispatch_call_block_and_release + 32
+6	libdispatch.dylib      	
+	_dispatch_client_callout + 20
+7	libdispatch.dylib      	
+	_dispatch_queue_override_invoke + 788
+8	libdispatch.dylib      	
+	_dispatch_root_queue_drain + 396
+9	libdispatch.dylib      	
+	_dispatch_worker_thread2 + 164
+10	libsystem_pthread.dylib	
+	_pthread_wqthread + 228
+11	libsystem_pthread.dylib	
+	start_wqthread + 8
+
+fetch.day.heartRate
+0	libobjc.A.dylib        	
+	objc_release_x0 + 24
+1	libobjc.A.dylib        	
+	objc_release + 24
+2	Zepp                   	
+	__63-[HMSQLiteTable(Find) findRecordWithWhere:orderBy:limit:error:]_block_invoke + 35311856
+3	Zepp                   	
+	-[HMSQLiteDatabase executeSQL:bind:rowHandle:error:] + 35285196
+4	Zepp                   	
+	-[HMSQLiteTable(Find) findRecordWithWhere:orderBy:limit:error:] + 35311616
+5	Zepp                   	
+	-[HMCPSleepManager sleepStageWithCondition:] + 35101436
+6	Zepp                   	
+	BandDBDataSource.findBandSleepStage(at:type:) + 24580776
+7	Zepp                   	
+	closure #2 in closure #1 in FetchDaysSleepHeartRepository.fetchManyDaysSleepHeart(from:completed:) + 24704140
+8	Zepp                   	
+	partial apply for closure #2 in closure #1 in FetchDaysSleepHeartRepository.fetchManyDaysSleepHeart(from:completed:) + 24711600
+9	Zepp                   	
+	specialized Collection.map<A>(_:) + 25061172
+10	Zepp                   	
+	specialized Collection.map<A>(_:) + 25060992
+11	Zepp                   	
+	closure #1 in FetchDaysSleepHeartRepository.fetchManyDaysSleepHeart(from:completed:) + 24702648
+12	Zepp                   	
+	thunk for @escaping @callee_guaranteed () -> () + 4378391124
+13	libdispatch.dylib      	
+	_dispatch_call_block_and_release + 32
+14	libdispatch.dylib      	
+	_dispatch_client_callout + 20
+15	libdispatch.dylib      	
+	_dispatch_lane_serial_drain + 672
+16	libdispatch.dylib      	
+	_dispatch_lane_invoke + 384
+17	libdispatch.dylib      	
+	_dispatch_workloop_worker_thread + 652
+18	libsystem_pthread.dylib	
+	_pthread_wqthread + 288
+19	libsystem_pthread.dylib	
+	start_wqthread + 8
+
+Thread
+0	libsystem_kernel.dylib 	
+	__workq_kernreturn + 8
+1	libsystem_pthread.dylib	
+	_pthread_wqthread + 364
+2	libsystem_pthread.dylib	
+	start_wqthread + 8
+
+com.apple.root.default-qos
+0	libsystem_kernel.dylib 	
+	__psynch_mutexwait + 8
+1	libsystem_pthread.dylib	
+	_pthread_mutex_firstfit_lock_wait + 84
+2	libsystem_pthread.dylib	
+	_pthread_mutex_firstfit_lock_slow + 248
+3	Foundation             	
+	-[NSRecursiveLock lock] + 28
+4	Zepp                   	
+	-[HMSQLiteDatabase executeSQL:bind:rowHandle:error:] + 35285076
+5	Zepp                   	
+	-[HMSQLiteTable(Find) findRecordWithWhere:orderBy:limit:error:] + 35311616
+6	Zepp                   	
+	-[HMDBActivityStatsLogic lastDataSyncDate] + 35150612
+7	Zepp                   	
+	-[HMDoubleEarphoneLogic avilableLastSyncDate] + 8590480
+8	Zepp                   	
+	SleepBaseZeppMoudle.chopinLastSyncDate() + 155
+9	Zepp                   	
+	protocol witness for SleepBaseSyncDateDependce.chopinLastSyncDate() in conformance SleepBaseZeppMoudle + 4378784440
+10	Zepp                   	
+	SleepIsolationManager.bandLastSyncDate() + 25743004
+11	Zepp                   	
+	SleepDetailNavBarLogic.dayCanEdit(at:) + 25654264
+12	Zepp                   	
+	SleepDetailNavBarLogic.logicDayNavState(_:) + 25652236
+13	Zepp                   	
+	closure #2 in SleepDayPageController.upDateDayNavConfigDataSource(_:_:) + 25583496
+14	Zepp                   	
+	thunk for @escaping @callee_guaranteed () -> () + 4378391124
+15	libdispatch.dylib      	
+	_dispatch_call_block_and_release + 32
+16	libdispatch.dylib      	
+	_dispatch_client_callout + 20
+17	libdispatch.dylib      	
+	_dispatch_queue_override_invoke + 788
+18	libdispatch.dylib      	
+	_dispatch_root_queue_drain + 396
+19	libdispatch.dylib      	
+	_dispatch_worker_thread2 + 164
+20	libsystem_pthread.dylib	
+	_pthread_wqthread + 228
+21	libsystem_pthread.dylib	
+	start_wqthread + 8
+
+com.apple.uikit.eventfetch-thread
+0	libsystem_kernel.dylib 	
+	mach_msg2_trap + 8
+1	libsystem_kernel.dylib 	
+	mach_msg2_internal + 80
+2	libsystem_kernel.dylib 	
+	mach_msg_overwrite + 388
+3	libsystem_kernel.dylib 	
+	mach_msg + 24
+4	CoreFoundation         	
+	__CFRunLoopServiceMachPort + 160
+5	CoreFoundation         	
+	__CFRunLoopRun + 1232
+6	CoreFoundation         	
+	CFRunLoopRunSpecific + 612
+7	Foundation             	
+	-[NSRunLoop(NSRunLoop) runMode:beforeDate:] + 212
+8	Foundation             	
+	-[NSRunLoop(NSRunLoop) runUntilDate:] + 64
+9	UIKitCore              	
+	-[UIEventFetcher threadMain] + 436
+10	Foundation             	
+	__NSThread__start__ + 716
+11	libsystem_pthread.dylib	
+	_pthread_start + 148
+12	libsystem_pthread.dylib	
+	thread_start + 8
+
+Thread
+0	libsystem_kernel.dylib 	
+	__workq_kernreturn + 8
+1	libsystem_pthread.dylib	
+	_pthread_wqthread + 364
+2	libsystem_pthread.dylib	
+	start_wqthread + 8
+
+com.apple.root.default-qos
+0	libsystem_platform.dylib	
+	_platform_strlen + 80
+1	libicucore.A.dylib      	
+	icu::StringPiece::StringPiece(char const*) + 36
+2	libicucore.A.dylib      	
+	ures_getByKeyWithFallback + 188
+3	libicucore.A.dylib      	
+	icu::DecimalFormatSymbols::setCurrency(char16_t const*, UErrorCode&) + 316
+4	libicucore.A.dylib      	
+	icu::DecimalFormatSymbols::initialize(icu::Locale const&, UErrorCode&, signed char, icu::NumberingSystem const*) + 1304
+5	libicucore.A.dylib      	
+	icu::DecimalFormatSymbols::DecimalFormatSymbols(icu::Locale const&, icu::NumberingSystem const&, UErrorCode&) + 332
+6	libicucore.A.dylib      	
+	icu::number::LocalizedNumberFormatter::getDecimalFormatSymbols() const + 4908
+7	libicucore.A.dylib      	
+	icu::number::LocalizedNumberFormatter::getDecimalFormatSymbols() const + 1504
+8	libicucore.A.dylib      	
+	icu::number::LocalizedNumberFormatter::computeCompiled(UErrorCode&) const + 116
+9	libicucore.A.dylib      	
+	icu::number::LocalizedNumberFormatter::formatImpl(icu::number::impl::UFormattedNumberData*, UErrorCode&) const + 92
+10	libicucore.A.dylib      	
+	icu::SimpleDateFormat::zeroPaddingNumber(icu::NumberFormat const*, icu::UnicodeString&, int, int, int) const + 756
+11	libicucore.A.dylib      	
+	icu::SimpleDateFormat::subFormat(icu::UnicodeString&, char16_t, int, UDisplayContext, int, char16_t, icu::FieldPositionHandler&, icu::Calendar&, UErrorCode&) const + 3036
+12	libicucore.A.dylib      	
+	icu::SimpleDateFormat::_format(icu::Calendar&, icu::UnicodeString&, icu::FieldPositionHandler&, UErrorCode&) const + 520
+13	libicucore.A.dylib      	
+	icu::SimpleDateFormat::format(icu::Calendar&, icu::UnicodeString&, icu::FieldPosition&) const + 84
+14	libicucore.A.dylib      	
+	icu::DateFormat::format(double, icu::UnicodeString&, icu::FieldPosition&) const + 176
+15	libicucore.A.dylib      	
+	udat_format + 352
+16	CoreFoundation          	
+	__cficu_udat_format + 68
+17	CoreFoundation          	
+	CFDateFormatterCreateStringWithAbsoluteTime + 188
+18	Foundation              	
+	-[NSISO8601DateFormatter stringForObjectValue:] + 76
+19	Zepp                    	
+	Date.toString(by:timeZone:) + 20577988
+20	Zepp                    	
+	specialized SPO2DataFetch.getDatasFromCloudsAndLocal(fromDate:toDate:followeeId:type:completion:) + 1191812
+21	Zepp                    	
+	specialized BODataFetchModule.fetchOsaSpo2(from:to:followeeId:completion:) + 1039324
+22	Zepp                    	
+	@objc BODataFetchModule.fetchOsaSpo2(from:to:followeeId:completion:) + 1039760
+23	Zepp                    	
+	closure #1 in FetchRespiratoryQyualityDayDataRespository.fetchDayRespiratoryQualityData(at:completed:) + 24757268
+24	Zepp                    	
+	thunk for @escaping @callee_guaranteed () -> () + 4378391124
+25	libdispatch.dylib       	
+	_dispatch_call_block_and_release + 32
+26	libdispatch.dylib       	
+	_dispatch_client_callout + 20
+27	libdispatch.dylib       	
+	_dispatch_queue_override_invoke + 788
+28	libdispatch.dylib       	
+	_dispatch_root_queue_drain + 396
+29	libdispatch.dylib       	
+	_dispatch_worker_thread2 + 164
+30	libsystem_pthread.dylib 	
+	_pthread_wqthread + 228
+31	libsystem_pthread.dylib 	
+	start_wqthread + 8
+
+com.xiaomi.mipush
+0	libsystem_kernel.dylib 	
+	mach_msg2_trap + 8
+1	libsystem_kernel.dylib 	
+	mach_msg2_internal + 80
+2	libsystem_kernel.dylib 	
+	mach_msg_overwrite + 388
+3	libsystem_kernel.dylib 	
+	mach_msg + 24
+4	CoreFoundation         	
+	__CFRunLoopServiceMachPort + 160
+5	CoreFoundation         	
+	__CFRunLoopRun + 1232
+6	CoreFoundation         	
+	CFRunLoopRunSpecific + 612
+7	Foundation             	
+	-[NSRunLoop(NSRunLoop) runMode:beforeDate:] + 212
+8	Zepp                   	
+	-[MiPushASIHTTPRequest startSynchronous] + 803
+9	Zepp                   	
+	-[MiPushNetWorkBaseUtils requestPOSTWithURL:secret:formInfo:] + 106
+10	Zepp                   	
+	-[MiPushNetWorkBaseUtils requestPOSTWithSuffixURL:formInfo:] + 122
+11	Zepp                   	
+	-[MiPushNetWorkUtils requestSetAlias:] + 89
+12	Zepp                   	
+	-[MiPushNetWorkBaseUtils doPerformRequest:dictInput:dictOutput:] + 53
+13	Zepp                   	
+	__47-[MiPushSDKController requestSetAlias:logName:]_block_invoke + 797
+14	libdispatch.dylib      	
+	_dispatch_call_block_and_release + 32
+15	libdispatch.dylib      	
+	_dispatch_client_callout + 20
+16	libdispatch.dylib      	
+	_dispatch_lane_serial_drain + 672
+17	libdispatch.dylib      	
+	_dispatch_lane_invoke + 384
+18	libdispatch.dylib      	
+	_dispatch_workloop_worker_thread + 652
+19	libsystem_pthread.dylib	
+	_pthread_wqthread + 288
+20	libsystem_pthread.dylib	
+	start_wqthread + 8
+
+fetch.daysData.local
+0	libsystem_kernel.dylib 	
+	__psynch_mutexwait + 8
+1	libsystem_pthread.dylib	
+	_pthread_mutex_firstfit_lock_wait + 84
+2	libsystem_pthread.dylib	
+	_pthread_mutex_firstfit_lock_slow + 248
+3	Foundation             	
+	-[NSRecursiveLock lock] + 28
+4	Zepp                   	
+	-[HMSQLiteDatabase executeSQL:bind:rowHandle:error:] + 35285076
+5	Zepp                   	
+	-[HMSQLiteTable(Find) findColumns:where:orderBy:limit:error:] + 35303484
+6	Zepp                   	
+	-[HMCPChopinSummaryManager findSummaryWithColumns:where:orderBy:limit:error:] + 35060324
+7	Zepp                   	
+	ChopinDBDataSource.findChopinSummary(at:) + 24584944
+8	Zepp                   	
+	closure #1 in closure #1 in FetchLocalDaysDataRepository.fetchSleepDaysData(from:completed:) + 24744332
+9	Zepp                   	
+	partial apply for closure #1 in closure #1 in FetchLocalDaysDataRepository.fetchSleepDaysData(from:completed:) + 24744540
+10	Zepp                   	
+	specialized Collection.map<A>(_:) + 25061172
+11	Zepp                   	
+	specialized Collection.map<A>(_:) + 25060992
+12	Zepp                   	
+	closure #1 in FetchLocalDaysDataRepository.fetchSleepDaysData(from:completed:) + 24743248
+13	Zepp                   	
+	thunk for @escaping @callee_guaranteed () -> () + 4378391124
+14	libdispatch.dylib      	
+	_dispatch_call_block_and_release + 32
+15	libdispatch.dylib      	
+	_dispatch_client_callout + 20
+16	libdispatch.dylib      	
+	_dispatch_lane_serial_drain + 672
+17	libdispatch.dylib      	
+	_dispatch_lane_invoke + 384
+18	libdispatch.dylib      	
+	_dispatch_workloop_worker_thread + 652
+19	libsystem_pthread.dylib	
+	_pthread_wqthread + 288
+20	libsystem_pthread.dylib	
+	start_wqthread + 8
+
+com.google.firebase.crashlytics.MachExceptionServer
+0	Zepp                   	
+	FIRCLSProcessRecordAllThreads + 20190908
+1	Zepp                   	
+	FIRCLSProcessRecordAllThreads + 20191900
+2	Zepp                   	
+	FIRCLSHandler + 20156680
+3	Zepp                   	
+	FIRCLSMachExceptionServer + 20166708
+4	libsystem_pthread.dylib	
+	_pthread_start + 148
+5	libsystem_pthread.dylib	
+	thread_start + 8
+
+com.apple.root.default-qos
+0	libsystem_kernel.dylib 	
+	__psynch_mutexwait + 8
+1	libsystem_pthread.dylib	
+	_pthread_mutex_firstfit_lock_wait + 84
+2	libsystem_pthread.dylib	
+	_pthread_mutex_firstfit_lock_slow + 248
+3	Foundation             	
+	-[NSRecursiveLock lock] + 28
+4	Zepp                   	
+	-[HMSQLiteDatabase executeSQL:bind:rowHandle:error:] + 35285076
+5	Zepp                   	
+	-[HMSQLiteTable(Find) findColumns:where:orderBy:limit:error:] + 35303484
+6	Zepp                   	
+	-[HMCPActivitySummaryManager findSummaryWithColumns:where:orderBy:limit:error:] + 35037872
+7	Zepp                   	
+	BandDBDataSource.findBandSummary(at:) + 24580028
+8	Zepp                   	
+	closure #2 in closure #1 in FetchDaysSleepRespirotionRateRespository.fetchManyDaysSleepRespirationRate(from:completed:) + 24717608
+9	Zepp                   	
+	partial apply for closure #2 in closure #1 in FetchDaysSleepRespirotionRateRespository.fetchManyDaysSleepRespirationRate(from:completed:) + 24723064
+10	Zepp                   	
+	specialized Collection.map<A>(_:) + 25061172
+11	Zepp                   	
+	specialized Collection.map<A>(_:) + 25060992
+12	Zepp                   	
+	closure #1 in FetchDaysSleepRespirotionRateRespository.fetchManyDaysSleepRespirationRate(from:completed:) + 24715976
+13	Zepp                   	
+	thunk for @escaping @callee_guaranteed () -> () + 4378391124
+14	libdispatch.dylib      	
+	_dispatch_call_block_and_release + 32
+15	libdispatch.dylib      	
+	_dispatch_client_callout + 20
+16	libdispatch.dylib      	
+	_dispatch_queue_override_invoke + 788
+17	libdispatch.dylib      	
+	_dispatch_root_queue_drain + 396
+18	libdispatch.dylib      	
+	_dispatch_worker_thread2 + 164
+19	libsystem_pthread.dylib	
+	_pthread_wqthread + 228
+20	libsystem_pthread.dylib	
+	start_wqthread + 8
+
+AMapNetwork
+0	libsystem_kernel.dylib 	
+	mach_msg2_trap + 8
+1	libsystem_kernel.dylib 	
+	mach_msg2_internal + 80
+2	libsystem_kernel.dylib 	
+	mach_msg_overwrite + 388
+3	libsystem_kernel.dylib 	
+	mach_msg + 24
+4	CoreFoundation         	
+	__CFRunLoopServiceMachPort + 160
+5	CoreFoundation         	
+	__CFRunLoopRun + 1232
+6	CoreFoundation         	
+	CFRunLoopRunSpecific + 612
+7	Foundation             	
+	-[NSRunLoop(NSRunLoop) runMode:beforeDate:] + 212
+8	Foundation             	
+	-[NSRunLoop(NSRunLoop) run] + 64
+9	Zepp                   	
+	+[AMapNetworkOperation networkRequestThreadEntryPoint:] + 881564
+10	Foundation             	
+	__NSThread__start__ + 716
+11	libsystem_pthread.dylib	
+	_pthread_start + 148
+12	libsystem_pthread.dylib	
+	thread_start + 8
+
+JavaScriptCore libpas scavenger
+0	libsystem_kernel.dylib 	
+	__psynch_cvwait + 8
+1	libsystem_pthread.dylib	
+	_pthread_cond_wait + 1232
+2	JavaScriptCore         	
+	scavenger_thread_main + 1364
+3	libsystem_pthread.dylib	
+	_pthread_start + 148
+4	libsystem_pthread.dylib	
+	thread_start + 8
+
+com.apple.CFNetwork.CustomProtocols
+0	libsystem_kernel.dylib 	
+	mach_msg2_trap + 8
+1	libsystem_kernel.dylib 	
+	mach_msg2_internal + 80
+2	libsystem_kernel.dylib 	
+	mach_msg_overwrite + 388
+3	libsystem_kernel.dylib 	
+	mach_msg + 24
+4	CoreFoundation         	
+	__CFRunLoopServiceMachPort + 160
+5	CoreFoundation         	
+	__CFRunLoopRun + 1232
+6	CoreFoundation         	
+	CFRunLoopRunSpecific + 612
+7	CFNetwork              	
+	_CFURLStorageSessionDisableCache + 61088
+8	Foundation             	
+	__NSThread__start__ + 716
+9	libsystem_pthread.dylib	
+	_pthread_start + 148
+10	libsystem_pthread.dylib	
+	thread_start + 8
+
+com.apple.root.default-qos
+0	libsystem_kernel.dylib 	
+	__psynch_mutexwait + 8
+1	libsystem_pthread.dylib	
+	_pthread_mutex_firstfit_lock_wait + 84
+2	libsystem_pthread.dylib	
+	_pthread_mutex_firstfit_lock_slow + 248
+3	Foundation             	
+	-[NSRecursiveLock lock] + 28
+4	Zepp                   	
+	-[HMSQLiteDatabase executeSQL:bind:rowHandle:error:] + 35285076
+5	Zepp                   	
+	-[HMSQLiteTable(Find) findColumns:where:orderBy:limit:error:] + 35303484
+6	Zepp                   	
+	-[HMCPActivitySummaryManager findSummaryWithColumns:where:orderBy:limit:error:] + 35037872
+7	Zepp                   	
+	BandDBDataSource.findBandSummary(at:) + 24580028
+8	Zepp                   	
+	closure #1 in closure #1 in FetchSleepRegularDataRespository.fetchSleepRegularData(at:completed:) + 24778948
+9	Zepp                   	
+	partial apply for closure #1 in closure #1 in FetchSleepRegularDataRespository.fetchSleepRegularData(at:completed:) + 24783192
+10	Zepp                   	
+	specialized Collection.map<A>(_:) + 25061172
+11	Zepp                   	
+	specialized Collection.map<A>(_:) + 25060992
+12	Zepp                   	
+	closure #1 in FetchSleepRegularDataRespository.fetchSleepRegularData(at:completed:) + 24777620
+13	Zepp                   	
+	thunk for @escaping @callee_guaranteed () -> () + 4378391124
+14	libdispatch.dylib      	
+	_dispatch_call_block_and_release + 32
+15	libdispatch.dylib      	
+	_dispatch_client_callout + 20
+16	libdispatch.dylib      	
+	_dispatch_queue_override_invoke + 788
+17	libdispatch.dylib      	
+	_dispatch_root_queue_drain + 396
+18	libdispatch.dylib      	
+	_dispatch_worker_thread2 + 164
+19	libsystem_pthread.dylib	
+	_pthread_wqthread + 228
+20	libsystem_pthread.dylib	
+	start_wqthread + 8
+
+com.apple.NSURLConnectionLoader
+0	libsystem_kernel.dylib 	
+	mach_msg2_trap + 8
+1	libsystem_kernel.dylib 	
+	mach_msg2_internal + 80
+2	libsystem_kernel.dylib 	
+	mach_msg_overwrite + 388
+3	libsystem_kernel.dylib 	
+	mach_msg + 24
+4	CoreFoundation         	
+	__CFRunLoopServiceMachPort + 160
+5	CoreFoundation         	
+	__CFRunLoopRun + 1232
+6	CoreFoundation         	
+	CFRunLoopRunSpecific + 612
+7	CFNetwork              	
+	_CFURLStorageSessionDisableCache + 61088
+8	Foundation             	
+	__NSThread__start__ + 716
+9	libsystem_pthread.dylib	
+	_pthread_start + 148
+10	libsystem_pthread.dylib	
+	thread_start + 8
+
+com.apple.CFSocket.private
+0	libsystem_kernel.dylib 	
+	select$DARWIN_EXTSN + 8
+1	libsystem_kernel.dylib 	
+	__select + 8
+2	CoreFoundation         	
+	__CFSocketManager + 636
+3	libsystem_pthread.dylib	
+	_pthread_start + 148
+4	libsystem_pthread.dylib	
+	thread_start + 8
+
+Crashed: fetch.chopin.net
+0	libswiftCore.dylib     	
+	_swift_release_dealloc + 32
+1	Zepp                   	
+	HeartRateModuleLifeCycle.processAutoHeartRateDailyNotification(_:) + 24057464
+2	Zepp                   	
+	@objc HeartRateModuleLifeCycle.processAutoHeartRateDailyNotification(_:) + 24058972
+3	CoreFoundation         	
+	__CFNOTIFICATIONCENTER_IS_CALLING_OUT_TO_AN_OBSERVER__ + 148
+4	CoreFoundation         	
+	___CFXRegistrationPost_block_invoke + 88
+5	CoreFoundation         	
+	_CFXRegistrationPost + 440
+6	CoreFoundation         	
+	_CFXNotificationPost + 704
+7	Foundation             	
+	-[NSNotificationCenter postNotificationName:object:userInfo:] + 92
+8	Zepp                   	
+	+[DCActivityDataProcessor processRawsWithDateSet:deviceID:isBand:useHearRates:isRecounting:userID:bandDeviceType:] + 33613308
+9	Zepp                   	
+	specialized SleepBaseZeppMoudle.runAlgo(days:deviceType:) + 111
+10	Zepp                   	
+	FetchChopiSummaryDataRespository.handleHealthData(data:) + 24656100
+11	Zepp                   	
+	closure #1 in closure #1 in FetchChopiSummaryDataRespository.fetchChopinSummaryDataFromCloud(at:completed:) + 24653060
+12	Zepp                   	
+	thunk for @escaping @callee_guaranteed () -> () + 4378391124
+13	libdispatch.dylib      	
+	_dispatch_call_block_and_release + 32
+14	libdispatch.dylib      	
+	_dispatch_client_callout + 20
+15	libdispatch.dylib      	
+	_dispatch_lane_serial_drain + 672
+16	libdispatch.dylib      	
+	_dispatch_lane_invoke + 384
+17	libdispatch.dylib      	
+	_dispatch_workloop_worker_thread + 652
+18	libsystem_pthread.dylib	
+	_pthread_wqthread + 288
+19	libsystem_pthread.dylib	
+	start_wqthread + 8
+
+Thread
+0	libsystem_pthread.dylib	
+	start_wqthread + 254
+
+Thread
+0	libsystem_kernel.dylib 	
+	__workq_kernreturn + 8
+1	libsystem_pthread.dylib	
+	_pthread_wqthread + 364
+2	libsystem_pthread.dylib	
+	start_wqthread + 8
+
+Thread
+0	libsystem_pthread.dylib	
+	start_wqthread + 254
+
+com.facebook.react.JavaScript
+0	libsystem_kernel.dylib 	
+	mach_msg2_trap + 8
+1	libsystem_kernel.dylib 	
+	mach_msg2_internal + 80
+2	libsystem_kernel.dylib 	
+	mach_msg_overwrite + 388
+3	libsystem_kernel.dylib 	
+	mach_msg + 24
+4	CoreFoundation         	
+	__CFRunLoopServiceMachPort + 160
+5	CoreFoundation         	
+	__CFRunLoopRun + 1232
+6	CoreFoundation         	
+	CFRunLoopRunSpecific + 612
+7	Zepp                   	
+	+[RCTCxxBridge runRunLoop] + 23332704
+8	Foundation             	
+	__NSThread__start__ + 716
+9	libsystem_pthread.dylib	
+	_pthread_start + 148
+10	libsystem_pthread.dylib	
+	thread_start + 8
+
+Heap Helper Thread
+0	libsystem_kernel.dylib 	
+	__psynch_cvwait + 8
+1	libsystem_pthread.dylib	
+	_pthread_cond_wait + 1232
+2	JavaScriptCore         	
+	WTF::ParkingLot::parkConditionallyImpl(void const*, WTF::ScopedLambda<bool ()> const&, WTF::ScopedLambda<void ()> const&, WTF::TimeWithDynamicClockType const&) + 1808
+3	JavaScriptCore         	
+	bool WTF::Condition::waitUntilUnchecked<WTF::Lock>(WTF::Lock&, WTF::TimeWithDynamicClockType const&) + 304
+4	JavaScriptCore         	
+	WTF::Detail::CallableWrapper<WTF::AutomaticThread::start(WTF::AbstractLocker const&)::$_0, void>::call() + 248
+5	JavaScriptCore         	
+	WTF::Thread::entryPoint(WTF::Thread::NewThreadContext*) + 352
+6	JavaScriptCore         	
+	WTF::wtfThreadEntryPoint(void*) + 16
+7	libsystem_pthread.dylib	
+	_pthread_start + 148
+8	libsystem_pthread.dylib	
+	thread_start + 8
+
+Heap Helper Thread
+0	libsystem_kernel.dylib 	
+	__psynch_cvwait + 8
+1	libsystem_pthread.dylib	
+	_pthread_cond_wait + 1232
+2	JavaScriptCore         	
+	WTF::ParkingLot::parkConditionallyImpl(void const*, WTF::ScopedLambda<bool ()> const&, WTF::ScopedLambda<void ()> const&, WTF::TimeWithDynamicClockType const&) + 1808
+3	JavaScriptCore         	
+	bool WTF::Condition::waitUntilUnchecked<WTF::Lock>(WTF::Lock&, WTF::TimeWithDynamicClockType const&) + 304
+4	JavaScriptCore         	
+	WTF::Detail::CallableWrapper<WTF::AutomaticThread::start(WTF::AbstractLocker const&)::$_0, void>::call() + 248
+5	JavaScriptCore         	
+	WTF::Thread::entryPoint(WTF::Thread::NewThreadContext*) + 352
+6	JavaScriptCore         	
+	WTF::wtfThreadEntryPoint(void*) + 16
+7	libsystem_pthread.dylib	
+	_pthread_start + 148
+8	libsystem_pthread.dylib	
+	thread_start + 8
+
+Heap Helper Thread
+0	libsystem_kernel.dylib 	
+	__psynch_cvwait + 8
+1	libsystem_pthread.dylib	
+	_pthread_cond_wait + 1232
+2	JavaScriptCore         	
+	WTF::ParkingLot::parkConditionallyImpl(void const*, WTF::ScopedLambda<bool ()> const&, WTF::ScopedLambda<void ()> const&, WTF::TimeWithDynamicClockType const&) + 1808
+3	JavaScriptCore         	
+	bool WTF::Condition::waitUntilUnchecked<WTF::Lock>(WTF::Lock&, WTF::TimeWithDynamicClockType const&) + 304
+4	JavaScriptCore         	
+	WTF::Detail::CallableWrapper<WTF::AutomaticThread::start(WTF::AbstractLocker const&)::$_0, void>::call() + 248
+5	JavaScriptCore         	
+	WTF::Thread::entryPoint(WTF::Thread::NewThreadContext*) + 352
+6	JavaScriptCore         	
+	WTF::wtfThreadEntryPoint(void*) + 16
+7	libsystem_pthread.dylib	
+	_pthread_start + 148
+8	libsystem_pthread.dylib	
+	thread_start + 8
+
+Heap Helper Thread
+0	libsystem_kernel.dylib 	
+	__psynch_cvwait + 8
+1	libsystem_pthread.dylib	
+	_pthread_cond_wait + 1232
+2	JavaScriptCore         	
+	WTF::ParkingLot::parkConditionallyImpl(void const*, WTF::ScopedLambda<bool ()> const&, WTF::ScopedLambda<void ()> const&, WTF::TimeWithDynamicClockType const&) + 1808
+3	JavaScriptCore         	
+	bool WTF::Condition::waitUntilUnchecked<WTF::Lock>(WTF::Lock&, WTF::TimeWithDynamicClockType const&) + 304
+4	JavaScriptCore         	
+	WTF::Detail::CallableWrapper<WTF::AutomaticThread::start(WTF::AbstractLocker const&)::$_0, void>::call() + 248
+5	JavaScriptCore         	
+	WTF::Thread::entryPoint(WTF::Thread::NewThreadContext*) + 352
+6	JavaScriptCore         	
+	WTF::wtfThreadEntryPoint(void*) + 16
+7	libsystem_pthread.dylib	
+	_pthread_start + 148
+8	libsystem_pthread.dylib	
+	thread_start + 8
+
+Heap Helper Thread
+0	libsystem_kernel.dylib 	
+	__psynch_cvwait + 8
+1	libsystem_pthread.dylib	
+	_pthread_cond_wait + 1232
+2	JavaScriptCore         	
+	WTF::ParkingLot::parkConditionallyImpl(void const*, WTF::ScopedLambda<bool ()> const&, WTF::ScopedLambda<void ()> const&, WTF::TimeWithDynamicClockType const&) + 1808
+3	JavaScriptCore         	
+	bool WTF::Condition::waitUntilUnchecked<WTF::Lock>(WTF::Lock&, WTF::TimeWithDynamicClockType const&) + 304
+4	JavaScriptCore         	
+	WTF::Detail::CallableWrapper<WTF::AutomaticThread::start(WTF::AbstractLocker const&)::$_0, void>::call() + 248
+5	JavaScriptCore         	
+	WTF::Thread::entryPoint(WTF::Thread::NewThreadContext*) + 352
+6	JavaScriptCore         	
+	WTF::wtfThreadEntryPoint(void*) + 16
+7	libsystem_pthread.dylib	
+	_pthread_start + 148
+8	libsystem_pthread.dylib	
+	thread_start + 8
+
